@@ -9,8 +9,8 @@ Lector digital bilingüe para personalizar cuentos infantiles. Primera historia:
 La narración castellana procede del **cuento original íntegro** que ha facilitado el autor, sin recortar escenas, diálogos, desenlace ni moraleja. Se conserva una copia intocable en `originales/Las_golosinas_del_lobo_original.txt`.
 
 - Nombre personalizable al escribirlo en la portada, sin modificar el argumento.
-- Unicornio niña (unicornia), unicornio niño, dinosaurio niña (dinosauria) y dinosaurio niño.
-- Concordancias y descripciones físicas de cada criatura, sin reescritura de escenas.
+- Unicornio niña (unicornia), unicornio niño, conejo niña (conejita) y conejo niño (conejito).
+- Concordancias y descripciones físicas de cada criatura, sin reescritura de escenas. La variante de conejo tiene pelaje blanco, orejas largas y una colita redonda.
 - En `variantes/` se incluyen las cuatro versiones castellanas completas con nombres de ejemplo Iris y Leo para cotejar el resultado.
 - La versión **CAT** utiliza una traducción catalana completa y personalizada, no el resumen provisional anterior. La versión castellana facilitada por el autor sigue siendo el texto de referencia.
 - Lectura repartida en **10 páginas**, sin eliminar ningún párrafo de la narración.
@@ -18,7 +18,7 @@ La narración castellana procede del **cuento original íntegro** que ha facilit
 ## Características
 
 - Castellano y catalán.
-- Nombre y opciones de niña/niño y unicornio/dinosaurio, introducidos en la pantalla inicial.
+- Nombre y opciones de niña/niño y unicornio/conejo, introducidos en la pantalla inicial.
 - Cuestionario de comprensión al final: las respuestas correctas desaparecen y las incorrectas pueden repetirse, sin revelar la solución.
 - Compatible con móviles y PWA instalable y usable sin conexión después de la primera carga.
 - Sin cuentas ni servicios externos: el nombre se guarda solamente en el navegador con `localStorage`.
