@@ -8,7 +8,7 @@ const window = {};
 vm.runInNewContext(fs.readFileSync(path.join(root,'stories.js'),'utf8'), {window});
 const unbold = s => s.replace(/<\/?strong>/g,'');
 const book = window.STORY_LIBRARY;
-for (const creature of ['unicornio', 'dinosaurio']) {
+for (const creature of ['unicornio', 'conejo']) {
   for (const gender of ['nina','nino']) {
     const female = gender === 'nina';
     const unicorn = creature === 'unicornio';
@@ -22,7 +22,7 @@ for (const creature of ['unicornio', 'dinosaurio']) {
     assert(renderedES.includes(`Nadie volvió a ver a ${name}.`));
     assert(!renderedES.includes('{{'));
     if (!unicorn) assert(!/unicornio|unicornia/i.test(renderedES));
-    if (unicorn) assert(!/dinosaurio|dinosauria/i.test(renderedES));
+    if (unicorn) assert(!/conejito|conejita/i.test(renderedES));
     if (!female) {
       for (const fragment of ['engañarlo.', 'lo dejó encerrado.', 'tú mismo.', 'Su papá lo llevó']) assert(renderedES.includes(fragment));
       for (const fragment of ['engañarla.', 'la dejó encerrada.', 'tú misma.', 'Su papá la llevó']) assert(!renderedES.includes(fragment));
@@ -34,7 +34,15 @@ for (const creature of ['unicornio', 'dinosaurio']) {
     if (!female) assert(renderedCA.includes('enganyar-lo') && renderedCA.includes('va deixar tancat'));
     if (female) assert(renderedCA.includes('enganyar-la') && renderedCA.includes('va deixar tancada'));
     if (!unicorn) assert(!/\bunicorn\b/.test(renderedCA));
-    if (unicorn) assert(!/\bdinosaure\b|\bdinosaura\b/.test(renderedCA));
+    if (unicorn) assert(!/\bconillet\b|\bconilleta\b/.test(renderedCA));
+    if (!unicorn) {
+      assert(renderedES.includes(female ? 'una pequeña conejita blanca' : 'un pequeño conejito blanco'));
+      assert(renderedES.includes(female ? 'estaba contenta' : 'estaba contento'));
+      assert(renderedCA.includes(female ? 'una petita conilleta blanca' : 'un petit conillet blanc'));
+      assert(renderedCA.includes(female ? 'estava contenta' : 'estava content'));
+      assert(renderedES.includes('levantó las orejas'));
+      assert(renderedCA.includes('va alçar les orelles'));
+    }
     console.log(`✓ ${creature} / ${gender} (ES y CAT)`);
   }
 }
