@@ -1,83 +1,70 @@
 /*
- * CONTENIDO PROVISIONAL
- * Esta versión de ocho páginas reproduce el argumento general del cuento
- * compartido por su autor, pero NO es una transcripción literal del original.
- * Sustituir estas ocho páginas por los textos definitivos antes del lanzamiento.
+ * Cuéntame mi cuento · Las golosinas del lobo
+ * Narración en castellano basada en el texto íntegro facilitado por el autor.
+ * El archivo original, sin adaptar, se conserva en originales/Las_golosinas_del_lobo_original.txt.
+ * La versión catalana es una traducción y no sustituye al original en castellano.
  */
-(function(){
-  const h = s => String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-  const marked = n => `<strong>${h(n)}</strong>`;
-  const data = {
-    es: {
-      title:'Las golosinas del lobo',
-      pages:[
-        {title:'En el bosque encantado',scene:'forest',other:'🌸',text:c=>`En un bosque lleno de árboles enormes y flores de mil colores vivía ${marked(c.name)}, ${c.unicorn ? (c.female?'una pequeña unicornia rosa':'un pequeño unicornio rosa') : (c.female?'una pequeña dinosauria verde':'un pequeño dinosaurio verde')}.
+(() => {
+  'use strict';
+  const originals = { es: "LAS GOLOSINAS DEL LOBO\n\nCuento de Javier L. Teso\n\nEn lo más profundo del bosque, donde los árboles eran tan altos que sus ramas parecían tocar las nubes, vivía {{name}}, {{presentation}}.\n\n{{name}} {{body}}.\n\nLe encantaba correr entre las flores, saltar sobre los arroyos y jugar con los demás animales del bosque. Pero había algo que le gustaba todavía más: las golosinas.\n\nLe encantaban las nubes de azúcar, los ositos de colores, las piruletas, los helados de frutas y, sobre todo, el chocolate.\n\nSi pudiera, habría comido dulces desde que se levantaba hasta que se acostaba.\n\nSu papá le recordaba cada día:\n\n—{{name}}, después de comer tienes que cepillarte muy bien los dientes.\n\nPero algunas veces {{name}} tenía demasiadas ganas de continuar jugando y se los cepillaba muy deprisa. Otras veces decía que ya lo había hecho, aunque no fuera verdad.\n\nHasta que una mañana, mientras desayunaba junto a su madriguera, comenzó a dolerle una muela.\n\nPrimero sintió una pequeña molestia. Después, el dolor se hizo más fuerte.\n\n—Papá, me duele mucho este diente —dijo señalándose la boca {{hand}}.\n\nSu papá {{accusative}} llevó a ver al señor Castor, el dentista del bosque.\n\nLa consulta se encontraba dentro del tronco hueco de un enorme roble. Había cepillos de dientes de todos los tamaños, frascos de colores y un gran sillón hecho con ramas y hojas suaves.\n\n{{name}} se sentó en el sillón y abrió la boca mientras el señor Castor examinaba sus dientes con un pequeño espejo.\n\n—Ya sé qué ocurre —explicó—. Tienes una caries. Este diente se ha picado porque has comido demasiados dulces y no te has cepillado bien los dientes.\n\nEl señor Castor tuvo que limpiarle la caries y arreglarle el diente.\n\nCuando terminó, le dijo:\n\n—Puedes comer alguna golosina de vez en cuando, pero no todos los días. Y recuerda que debes cepillarte muy bien los dientes después de cada comida.\n\nAl salir de la consulta, el papá de {{name}} se detuvo bajo las ramas del gran roble.\n\n—{{name}}, no puedes comer tantas golosinas, tantos helados y tanto chocolate. Te hacen daño en los dientes.\n\n—No lo volveré a hacer —prometió {{small_person}} {{name}}—. A partir de ahora me cepillaré los dientes muy bien.\n\nLo que {{name}} y su papá no sabían era que, detrás de unos arbustos, había un lobo que había escuchado toda la conversación.\n\nEra un lobo grande, peludo y muy astuto.\n\n—Así que a {{that_creature}} le encantan las golosinas, los helados y el chocolate… —murmuró—. Creo que ya sé cómo engañar{{accusative}}.\n\nAl día siguiente, el lobo encontró una vieja carretilla abandonada junto a la cabaña del jardinero del bosque.\n\nLa vació, la limpió y preparó en su interior un escondite lo bastante grande para que cupiera {{small_creature}}.\n\nDespués colocó encima una tapa con una trampilla. Para disimularla, llenó la carretilla de bolsas de golosinas, cucuruchos de helado y tabletas de chocolate de todas las formas y colores.\n\nCuando terminó, parecía el puesto de dulces más maravilloso de todo el bosque.\n\nEl lobo empujó la carretilla por un sendero hasta llegar al claro donde jugaban los animales más pequeños.\n\n{{name}} estaba saltando sobre unas piedras cuando escuchó una voz que se acercaba entre los árboles:\n\n—¡Golosinas, helados y chocolate! ¡Golosinas, helados y chocolate!\n\n{{name}} se detuvo de repente y {{ears}}.\n\n—¡Esas son las cosas que más me gustan del mundo!\n\n{{Small_person}} {{name}} siguió aquella voz hasta encontrar al lobo junto a la carretilla.\n\n—Hola, señor lobo —dijo {{name}}—. ¿Qué tienes ahí?\n\nEl lobo mostró una sonrisa amable.\n\n—Tengo golosinas de todos los colores, helados de muchos sabores y el chocolate más delicioso que puedas imaginar.\n\n—¡Hala! —exclamó {{name}} mientras contemplaba la carretilla con los ojos muy abiertos—. ¡Me encanta el chocolate!\n\n—¿Ah, sí? —preguntó el lobo—. ¿Y cuál es el chocolate que más te gusta?\n\n—El que tiene forma de corazón.\n\nEl lobo fingió pensar durante unos segundos.\n\n—Chocolate con forma de corazón… Estoy seguro de que tenía mucho, pero debe de haber quedado debajo de todas estas bolsas.\n\nApartó unas cuantas golosinas y levantó un poco la trampilla.\n\n—Mira, mira. Asómate y compruébalo tú {{self}}.\n\n{{name}} no conocía a aquel lobo, pero la carretilla estaba llena de tantas cosas deliciosas que olvidó todas las precauciones.\n\nSe acercó un poco más.\n\n—¿Está ahí dentro? —preguntó.\n\n—Sí, al fondo —respondió el lobo—. Asómate un poco más.\n\n{{name}} apoyó las patas delanteras sobre la carretilla y metió la cabeza por la abertura.\n\nEn ese momento, el lobo le dio un fuerte empujón.\n\n{{name}} cayó dentro del escondite.\n\nAntes de que pudiera levantarse, el lobo cerró la trampilla y {{accusative}} dejó {{locked}}.\n\nDespués cubrió de nuevo la tapa con las bolsas de golosinas y se alejó rápidamente empujando la carretilla por el sendero.\n\nSe internó en la parte más oscura del bosque y desapareció entre los árboles.\n\nNadie volvió a ver a {{name}}.\n\nDesde aquel día, todos los animales del bosque enseñaron a sus hijos algo muy importante:\n\nNunca debes acercarte a alguien que no conoces, aunque parezca amable o te ofrezca golosinas, juguetes o cualquier otra cosa que te guste.\n\nSi un desconocido te llama o te pide que te acerques, aléjate y busca inmediatamente a un adulto de confianza.\n\nPorque algunas veces, detrás de un regalo maravilloso, puede esconderse una trampa.", ca: "LES LLAMINADURES DEL LLOP\n\nConte de Javier L. Teso\n\nAl cor del bosc més profund, on els arbres eren tan alts que les seves branques semblaven tocar els núvols, hi vivia {{name}}, {{presentation}}.\n\n{{name}} {{body}}.\n\nLi encantava córrer entre les flors, saltar per damunt dels rierols i jugar amb els altres animals del bosc. Però hi havia una cosa que encara li agradava més: les llaminadures.\n\nLi encantaven els núvols de sucre, els ossets de colors, les piruletes, els gelats de fruites i, sobretot, la xocolata.\n\nSi pogués, menjaria dolços des que es llevava fins que se n'anava a dormir.\n\nEl seu pare li recordava cada dia:\n\n—{{name}}, després de menjar t'has de raspallar molt bé les dents.\n\nPerò, de vegades, {{name}} tenia massa ganes de continuar jugant i se les raspallava molt de pressa. Altres vegades deia que ja ho havia fet, tot i que no era veritat.\n\nFins que un matí, mentre esmorzava al costat del seu cau, li va començar a fer mal un queixal.\n\nPrimer va notar una petita molèstia. Després, el dolor es va fer més intens.\n\n—Pare, em fa molt mal aquesta dent —va dir assenyalant-se la boca {{hand}}.\n\nEl seu pare {{accusative}} va portar a veure el senyor Castor, el dentista del bosc.\n\nLa consulta era dins del tronc buit d'un roure enorme. Hi havia raspalls de dents de totes les mides, pots de colors i una gran butaca feta amb branques i fulles suaus.\n\n{{name}} es va asseure a la butaca i va obrir la boca mentre el senyor Castor li examinava les dents amb un petit mirall.\n\n—Ja sé què passa —va explicar—. Tens una càries. Aquesta dent s'ha corcat perquè has menjat massa dolços i no t'has raspallat bé les dents.\n\nEl senyor Castor va haver de netejar-li la càries i arreglar-li la dent.\n\nQuan va acabar, li va dir:\n\n—Pots menjar alguna llaminadura de tant en tant, però no cada dia. I recorda que t'has de raspallar molt bé les dents després de cada àpat.\n\nEn sortir de la consulta, el pare de {{name}} es va aturar sota les branques del gran roure.\n\n—{{name}}, no pots menjar tantes llaminadures, tants gelats ni tanta xocolata. Et fan malbé les dents.\n\n—No ho tornaré a fer —va prometre {{small_person}} {{name}}—. A partir d'ara em raspallaré molt bé les dents.\n\nEl que {{name}} i el seu pare no sabien era que, darrere d'uns arbustos, hi havia un llop que havia sentit tota la conversa.\n\nEra un llop gros, pelut i molt astut.\n\n—Així doncs, a {{that_creature}} li encanten les llaminadures, els gelats i la xocolata… —va murmurar—. Em sembla que ja sé com enganyar{{object_suffix}}.\n\nL'endemà, el llop va trobar un carretó vell abandonat al costat de la cabana del jardiner del bosc.\n\nEl va buidar, el va netejar i va preparar a dins un amagatall prou gran perquè hi cabés {{small_creature}}.\n\nDesprés hi va col·locar una tapa amb una trapa. Per dissimular-la, va omplir el carretó de bosses de llaminadures, cucurutxos de gelat i rajoles de xocolata de totes les formes i colors.\n\nQuan va acabar, semblava la parada de dolços més meravellosa de tot el bosc.\n\nEl llop va empènyer el carretó per un sender fins a arribar a la clariana on jugaven els animals més petits.\n\n{{name}} estava saltant damunt d'unes pedres quan va sentir una veu que s'acostava entre els arbres:\n\n—Llaminadures, gelats i xocolata! Llaminadures, gelats i xocolata!\n\n{{name}} es va aturar de cop i {{ears}}.\n\n—Aquestes són les coses que més m'agraden del món!\n\n{{Small_person}} {{name}} va seguir aquella veu fins que va trobar el llop al costat del carretó.\n\n—Hola, senyor llop —va dir {{name}}—. Què hi tens, aquí?\n\nEl llop va fer un somriure amable.\n\n—Tinc llaminadures de tots els colors, gelats de molts gustos i la xocolata més deliciosa que et puguis imaginar.\n\n—Caram! —va exclamar {{name}} mentre mirava el carretó amb els ulls ben oberts—. M'encanta la xocolata!\n\n—Ah, sí? —va preguntar el llop—. I quina xocolata t'agrada més?\n\n—La que té forma de cor.\n\nEl llop va fer veure que pensava durant uns segons.\n\n—Xocolata amb forma de cor… Estic segur que en tenia molta, però deu haver quedat sota totes aquestes bosses.\n\nVa apartar unes quantes llaminadures i va aixecar una mica la trapa.\n\n—Mira, mira. Treu el cap i comprova-ho tu {{self}}.\n\n{{name}} no coneixia aquell llop, però el carretó era ple de tantes coses delicioses que es va oblidar de totes les precaucions.\n\nS'hi va acostar una mica més.\n\n—És aquí dins? —va preguntar.\n\n—Sí, al fons —va respondre el llop—. Treu el cap una mica més.\n\n{{name}} va recolzar les potes del davant sobre el carretó i va ficar el cap per l'obertura.\n\nEn aquell moment, el llop li va donar una forta empenta.\n\n{{name}} va caure dins de l'amagatall.\n\nAbans que es pogués aixecar, el llop va tancar la trapa i {{accusative}} va deixar {{locked}}.\n\nDesprés va tornar a cobrir la tapa amb les bosses de llaminadures i es va allunyar ràpidament empenyent el carretó pel sender.\n\nEs va endinsar a la part més fosca del bosc i va desaparèixer entre els arbres.\n\nNingú no va tornar a veure {{name}}.\n\nDes d'aquell dia, tots els animals del bosc van ensenyar als seus fills una cosa molt important:\n\nMai no t'has d'acostar a algú que no coneixes, encara que sembli amable o t'ofereixi llaminadures, joguines o qualsevol altra cosa que t'agradi.\n\nSi un desconegut et crida o et demana que t'hi acostis, allunya-te'n i busca immediatament un adult de confiança.\n\nPerquè, de vegades, darrere d'un regal meravellós, s'hi pot amagar un parany." };
+  const boundaries = [2, 7, 13, 20, 26, 31, 40, 46, 51, 57, 61];
+  const titles = {es: ["Un habitante del bosque", "Dulces y una muela dolorida", "El señor Castor", "Un lobo muy astuto", "La carretilla", "Una voz entre los árboles", "El chocolate de corazón", "Una tentación peligrosa", "La trampa del lobo", "La moraleja"], ca: ["Un habitant del bosc", "Dolços i un queixal que fa mal", "El senyor Castor", "Un llop molt astut", "El carretó", "Una veu entre els arbres", "La xocolata amb forma de cor", "Una temptació perillosa", "La trampa del llop", "La lliçó"]};
+  const scenes = ["forest", "candy", "dentist", "night", "candy", "forest", "candy", "candy", "night", "warning"];
+  const symbols = ["🌸", "🪥", "🦫", "🐺", "🍭", "🐺", "🍫", "🍬", "🐺", "💛"];
+  const escapeHtml = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 
-${marked(c.name)} era ${c.female?'alegre y curiosa':'alegre y curioso'} y disfrutaba jugando por los caminos del bosque.`},
-        {title:'¡Qué ricas golosinas!',scene:'candy',other:'🍭',text:c=>`A ${marked(c.name)} le encantaban los caramelos, las chocolatinas y los helados. Si pudiera, ¡comería dulces a todas horas!
-
-Pero un día, después de tantas golosinas, empezó a dolerle una muela. ¡Ay, ay, ay!`},
-        {title:'El señor Castor',scene:'dentist',other:'🦫',text:c=>`${marked(c.name)} fue a visitar al señor Castor, el dentista del bosque.
-
-—Veamos esa muela —dijo el castor con amabilidad—. Tienes una caries. Vamos a curarla para que puedas volver a sonreír.`},
-        {title:'Un consejo importante',scene:'dentist',other:'🪥',text:c=>`Después de arreglarle la muela, el señor Castor le dio un cepillo de dientes.
-
-—Los dulces son para ocasiones especiales. Y recuerda: nunca aceptes regalos de desconocidos sin hablar antes con tu familia.
-
-${marked(c.name)} prometió tenerlo muy presente.`},
-        {title:'Una carretilla misteriosa',scene:'candy',other:'🐺',text:c=>`Una tarde, mientras paseaba por el bosque, ${marked(c.name)} encontró a un lobo junto a una carretilla repleta de caramelos, helados y chocolatinas.
-
-—¡Acércate! —le dijo el lobo con una sonrisa—. Tengo las golosinas más deliciosas de todo el bosque.`},
-        {title:'El chocolate de corazón',scene:'candy',other:'🍫',text:c=>`En lo alto de la carretilla brillaba una chocolatina con forma de corazón. Era tan bonita que ${marked(c.name)} se acercó para verla mejor.
-
-—Está justo aquí, al fondo —susurró el lobo—. Puedes cogerla tú ${c.female?'misma':'mismo'}.
-
-${marked(c.name)} olvidó por un instante el consejo del señor Castor.`},
-        {title:'El secreto del lobo',scene:'night',other:'🐺',text:c=>`Cuando ${marked(c.name)} se asomó a la carretilla, el lobo ${c.female?'la':'lo'} empujó de golpe y cerró la tapa.
-
-El lobo agarró las asas y se adentró entre los árboles, hasta perderse en la parte más oscura del bosque.
-
-Nadie volvió a ver a ${marked(c.name)}.`},
-        {title:'Lo que aprendemos',scene:'warning',other:'💛',text:c=>`El cuento de ${marked(c.name)} nos recuerda algo importante: aunque un regalo parezca maravilloso, no debemos seguir a desconocidos ni aceptar sus propuestas sin consultar a un adulto de confianza.
-
-Y para cuidar nuestros dientes, ¡mejor disfrutar de los dulces con moderación y cepillarnos bien!`}
-      ]
-    },
-    ca: {
-      title:'Les llaminadures del llop',
-      pages:[
-        {title:'Al bosc encantat',scene:'forest',other:'🌸',text:c=>`En un bosc ple d'arbres enormes i flors de mil colors hi vivia ${marked(c.name)}, ${c.unicorn ? (c.female?"una petita criatura amb forma d'unicorn rosa":'un petit unicorn rosa') : (c.female?'una petita criatura amb forma de dinosaure verd':'un petit dinosaure verd')}.
-
-A ${marked(c.name)} li agradava molt jugar pels camins del bosc i sempre tenia ganes de descobrir coses noves.`},
-        {title:'Que bones, les llaminadures!',scene:'candy',other:'🍭',text:c=>`A ${marked(c.name)} li encantaven els caramels, les xocolatines i els gelats. Si pogués, menjaria dolços a totes hores!
-
-Però un dia, després de menjar tantes llaminadures, li va començar a fer mal un queixal. Ai, ai, ai!`},
-        {title:'El senyor Castor',scene:'dentist',other:'🦫',text:c=>`${marked(c.name)} va anar a visitar el senyor Castor, el dentista del bosc.
-
-—A veure aquest queixal —va dir el castor amablement—. Tens una càries. Te la curarem perquè puguis tornar a somriure.`},
-        {title:'Un consell important',scene:'dentist',other:'🪥',text:c=>`Després d'arreglar-li el queixal, el senyor Castor li va donar un raspall de dents.
-
-—Els dolços són per a ocasions especials. I recorda: no acceptis mai regals de desconeguts sense parlar abans amb la teva família.
-
-${marked(c.name)} va prometre que no ho oblidaria.`},
-        {title:'Un carretó misteriós',scene:'candy',other:'🐺',text:c=>`Una tarda, mentre passejava pel bosc, ${marked(c.name)} va trobar un llop al costat d'un carretó ple de caramels, gelats i xocolatines.
-
-—Acosta't! —li va dir el llop amb un somriure—. Tinc les llaminadures més delicioses de tot el bosc.`},
-        {title:'La xocolatina en forma de cor',scene:'candy',other:'🍫',text:c=>`Dalt de tot del carretó brillava una xocolatina en forma de cor. Era tan bonica que ${marked(c.name)} s'hi va acostar per veure-la millor.
-
-—És aquí al fons —va xiuxiuejar el llop—. La pots agafar.
-
-${marked(c.name)} va oblidar per un instant el consell del senyor Castor.`},
-        {title:'El secret del llop',scene:'night',other:'🐺',text:c=>`Quan ${marked(c.name)} es va abocar al carretó, el llop hi va donar una empenta i en va tancar la tapa de cop.
-
-El llop va agafar les nanses i es va endinsar entre els arbres, fins que es va perdre a la part més fosca del bosc.
-
-Ningú no va tornar a veure ${marked(c.name)}.`},
-        {title:"Què n’aprenem?",scene:'warning',other:'💛',text:c=>`El conte de ${marked(c.name)} ens recorda una cosa important: encara que un regal sembli meravellós, no hem de seguir desconeguts ni acceptar les seves propostes sense consultar abans un adult de confiança.
-
-I per cuidar les dents, és millor gaudir dels dolços amb moderació i raspallar-nos-les bé!`}
-      ]
+  function values(c, lang) {
+    const female = Boolean(c.female);
+    const unicorn = Boolean(c.unicorn);
+    if (lang === 'es') {
+      return {
+        name: `<strong>${escapeHtml(c.name)}</strong>`,
+        presentation: unicorn ? (female ? 'una pequeña unicornia rosa' : 'un pequeño unicornio rosa') : (female ? 'una pequeña dinosauria verde' : 'un pequeño dinosaurio verde'),
+        body: unicorn ? 'tenía el pelaje de color rosa, una larga crin brillante y un cuerno dorado que resplandecía cuando le daba la luz del sol' : 'tenía la piel de color verde, una larga cola y unas escamas brillantes que resplandecían cuando les daba la luz del sol',
+        that_creature: unicorn ? (female ? 'esa pequeña unicornia' : 'ese pequeño unicornio') : (female ? 'esa pequeña dinosauria' : 'ese pequeño dinosaurio'),
+        small_creature: unicorn ? (female ? 'una pequeña unicornia' : 'un pequeño unicornio') : (female ? 'una pequeña dinosauria' : 'un pequeño dinosaurio'),
+        hand: unicorn ? 'con una de sus pezuñas' : 'con una de sus patas',
+        ears: unicorn ? 'levantó las orejas' : 'levantó la cabeza',
+        accusative: female ? 'la' : 'lo',
+        small_person: female ? 'la pequeña' : 'el pequeño',
+        Small_person: female ? 'La pequeña' : 'El pequeño',
+        self: female ? 'misma' : 'mismo',
+        locked: female ? 'encerrada' : 'encerrado'
+      };
     }
-  };
-  window.STORY_LIBRARY = data;
+    return {
+      name: `<strong>${escapeHtml(c.name)}</strong>`,
+      presentation: unicorn ? (female ? 'una petita unicorn rosa' : 'un petit unicorn rosa') : (female ? 'una petita dinosaura verda' : 'un petit dinosaure verd'),
+      body: unicorn ? 'tenia el pelatge de color rosa, una llarga crinera brillant i una banya daurada que resplendia quan hi tocava la llum del sol' : 'tenia la pell de color verd, una cua llarga i unes escates brillants que resplendien quan hi tocava la llum del sol',
+      that_creature: unicorn ? (female ? 'aquella petita unicorn' : 'aquell petit unicorn') : (female ? 'aquella petita dinosaura' : 'aquell petit dinosaure'),
+      small_creature: unicorn ? (female ? 'una petita unicorn' : 'un petit unicorn') : (female ? 'una petita dinosaura' : 'un petit dinosaure'),
+      hand: unicorn ? 'amb una de les seves peülles' : 'amb una de les seves potes',
+      ears: unicorn ? 'va alçar les orelles' : 'va aixecar el cap',
+      accusative: female ? 'la' : 'el',
+      object_suffix: female ? '-la' : '-lo',
+      small_person: female ? 'la petita' : 'el petit',
+      Small_person: female ? 'La petita' : 'El petit',
+      self: female ? 'mateixa' : 'mateix',
+      locked: female ? 'tancada' : 'tancat'
+    };
+  }
+  function render(template, context, lang) {
+    const replacements = values(context, lang);
+    return template.replace(/\{\{([A-Za-z_]+)\}\}/g, (match, key) => {
+      if (!Object.prototype.hasOwnProperty.call(replacements,key)) throw new Error(`Falta variable del cuento: ${key}`);
+      return replacements[key];
+    });
+  }
+  function makeStory(lang) {
+    const paragraphs = originals[lang].trim().split(/\n\n+/);
+    const pages = titles[lang].map((title, i) => ({
+      title, scene: scenes[i], other: symbols[i],
+      text: c => {
+        const text = paragraphs.slice(boundaries[i], boundaries[i+1]).join('\n\n');
+        return render(i===0 ? `${paragraphs[1]}\n\n${text}` : text, c, lang);
+      }
+    }));
+    return {title: paragraphs[0], pages};
+  }
+  window.STORY_LIBRARY = {es:makeStory('es'), ca:makeStory('ca')};
 })();
