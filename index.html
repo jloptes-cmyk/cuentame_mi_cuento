@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#543789" />
+  <meta name="description" content="Cuéntame mi cuento: cuentos infantiles personalizados, en castellano y catalán. Tu nombre, tu personaje, tu aventura." />
+  <title>Cuéntame mi cuento · Cuentos personalizados</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./stories.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#inicio" id="homeLink" aria-label="Cuéntame mi cuento, volver al inicio"><span class="brand-icon" aria-hidden="true">✦</span> Cuéntame mi cuento</a>
+      <div class="top-actions">
+        <div class="lang-switch" role="group" aria-label="Idioma">
+          <button type="button" class="lang-button active" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" class="lang-button" data-lang="ca" aria-pressed="false">CAT</button>
+        </div>
+      </div>
+    </header>
+    <main id="mainContent" tabindex="-1">
+      <section id="setupView" class="view" aria-labelledby="setupHeading">
+        <div class="hero">
+          <div class="twink star-one">✧</div><div class="twink star-two">✦</div><div class="twink star-three">✳</div>
+          <span class="eyebrow" data-i18n="eyebrow">UN CUENTO SOLO PARA TI</span>
+          <h1 id="setupHeading" data-i18n="heroTitle">Érase una vez... ¡tú!</h1>
+          <p data-i18n="heroBody">Elige tu nombre y en qué criatura mágica quieres convertirte. El bosque y sus aventuras te esperan.</p>
+          <div class="hero-symbols" aria-hidden="true"><span>🌲</span><span>🦄</span><span>✨</span><span>🦕</span><span>🌳</span></div>
+        </div>
+        <div class="config-panel">
+          <form id="setupForm" autocomplete="off">
+            <div class="field-group">
+              <label for="childName" class="field-title" data-i18n="nameLabel">¿Cómo se llama quien protagoniza el cuento?</label>
+              <input id="childName" name="childName" type="text" maxlength="24" required placeholder="Escribe su nombre" spellcheck="false" />
+              <p class="field-note" data-i18n="privacyNote">Su nombre se utiliza solo en este dispositivo. No se envía a ningún servidor.</p>
+            </div>
+            <fieldset class="field-group">
+              <legend class="field-title" data-i18n="genderLabel">¿Cómo quieres que hablemos del personaje?</legend>
+              <div class="segment-row">
+                <label class="segment"><input type="radio" name="gender" value="f" checked /><span data-i18n="girl">Niña</span></label>
+                <label class="segment"><input type="radio" name="gender" value="m" /><span data-i18n="boy">Niño</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="field-group">
+              <legend class="field-title" data-i18n="creatureLabel">¿Quién quieres ser en esta aventura?</legend>
+              <div class="character-grid">
+                <label class="character-choice">
+                  <input type="radio" name="creature" value="unicorn" checked />
+                  <span class="character-tile"><span class="big-emoji" aria-hidden="true">🦄</span><strong data-i18n="unicorn">Unicornio</strong><small data-i18n="unicornDetail">Con un cuerno brillante</small><span class="tick" aria-hidden="true">✓</span></span>
+                </label>
+                <label class="character-choice">
+                  <input type="radio" name="creature" value="dinosaur" />
+                  <span class="character-tile"><span class="big-emoji" aria-hidden="true">🦕</span><strong data-i18n="dinosaur">Dinosaurio</strong><small data-i18n="dinosaurDetail">Con escamas y cola</small><span class="tick" aria-hidden="true">✓</span></span>
+                </label>
+              </div>
+            </fieldset>
+            <div class="action-wrap"><button class="primary-btn" id="startButton" type="submit"><span data-i18n="start">¡Empezar mi cuento!</span><span aria-hidden="true">→</span></button></div>
+          </form>
+        </div>
+        <p class="setup-footer" data-i18n="footer">Una historia para leer en familia · Castellano y catalán</p>
+      </section>
+      <section id="readerView" class="view hidden" aria-label="Lector de cuentos">
+        <div class="reader-top">
+          <button type="button" id="editButton" class="text-button"><span aria-hidden="true">←</span><span data-i18n="change">Cambiar personaje</span></button>
+          <span id="storyLabel" class="reader-kicker">LAS GOLOSINAS DEL LOBO</span>
+        </div>
+        <div class="book">
+          <div class="illustration" id="storyIllustration" aria-hidden="true">
+            <div class="forest forest-left">🌲</div><div class="sky-stars">✦ ✧ ✦</div><div id="illustrationHero" class="illustration-hero">🦄</div><div id="illustrationOther" class="illustration-other">🍬</div><div class="forest forest-right">🌳</div>
+          </div>
+          <article class="story-content" aria-live="polite" aria-atomic="true">
+            <div class="chapter-label" id="chapterLabel">PÁGINA 1 DE 8</div>
+            <h2 id="storyTitle">Las golosinas del lobo</h2>
+            <div id="storyText" class="story-text"></div>
+          </article>
+        </div>
+        <div class="reader-controls">
+          <button type="button" id="prevButton" class="secondary-btn">← <span data-i18n="previous">Anterior</span></button>
+          <div id="pageDots" class="page-dots" aria-label="Páginas"></div>
+          <button type="button" id="nextButton" class="primary-btn"><span data-i18n="next">Siguiente</span> →</button>
+        </div>
+        <p class="reader-warning" data-i18n="storyDraft">Versión inicial adaptada. El texto definitivo del cuento original se incorporará aquí.</p>
+      </section>
+      <section id="quizView" class="view hidden" aria-labelledby="quizHeading">
+        <div class="quiz-header"><span class="quiz-star" aria-hidden="true">⭐</span><h2 id="quizHeading" data-i18n="quizTitle">¿Qué recuerdas del cuento?</h2><p data-i18n="quizIntro">Responde y comprueba al final. Las respuestas acertadas desaparecerán; podrás corregir las demás.</p></div>
+        <form id="quizForm"><div id="quizQuestions"></div><div id="quizResult" class="quiz-result" role="status" aria-live="polite"></div><button type="submit" class="primary-btn"><span data-i18n="check">Comprobar respuestas</span> ✓</button></form>
+        <button type="button" id="rereadButton" class="text-button reread" data-i18n="reread">Volver a leer el cuento</button>
+      </section>
+    </main>
+    <footer class="site-footer">Cuéntame mi cuento <span aria-hidden="true">✦</span> <span data-i18n="footerShort">Tu nombre. Tu personaje. Tu aventura.</span></footer>
+  </div>
+</body>
+</html>
