@@ -2,41 +2,41 @@
 
 **Tu nombre. Tu personaje. Tu aventura.**
 
-Aplicación estática de cuentos infantiles personalizados. Primera historia: **Las golosinas del lobo / Les llaminadures del llop**.
+Lector digital bilingüe para personalizar cuentos infantiles. Primera historia: **Las golosinas del lobo**, de Javier L. Teso.
 
-## Qué incluye esta primera versión
+## Texto íntegro y variantes
 
-- Personalización de nombre, personaje (unicornio o dinosaurio) y niña/niño.
-- Lector adaptable al móvil, ocho páginas y cambio de idioma ES/CAT.
-- Personalización gramatical en los textos, incluidos algunos adjetivos y referentes al personaje.
-- Cuatro preguntas de comprensión al final: solo se señalan las incorrectas y desaparecen las acertadas, sin mostrar la solución.
-- Preferencias guardadas **localmente** en el navegador; no hay cuentas, publicidad, analítica ni servidor para los nombres.
-- PWA instalable y funcionamiento sin conexión una vez cargados los recursos.
+La narración castellana procede del **cuento original íntegro** que ha facilitado el autor, sin recortar escenas, diálogos, desenlace ni moraleja. Se conserva una copia intocable en `originales/Las_golosinas_del_lobo_original.txt`.
 
-## IMPORTANTE: historia de demostración
+- Nombre personalizable al escribirlo en la portada, sin modificar el argumento.
+- Unicornio niña (unicornia), unicornio niño, dinosaurio niña (dinosauria) y dinosaurio niño.
+- Concordancias y descripciones físicas de cada criatura, sin reescritura de escenas.
+- En `variantes/` se incluyen las cuatro versiones castellanas completas con nombres de ejemplo Iris y Leo para cotejar el resultado.
+- La versión **CAT** utiliza una traducción catalana completa y personalizada, no el resumen provisional anterior. La versión castellana facilitada por el autor sigue siendo el texto de referencia.
+- Lectura repartida en **10 páginas**, sin eliminar ningún párrafo de la narración.
 
-Los textos de `stories.js` son una **adaptación provisional del argumento** para probar todas las funciones. **No son una reproducción literal** del cuento original del autor. Antes de publicar para familias, reemplazar por el texto exacto validado, las ilustraciones y revisar las dos traducciones. Los símbolos emoji son marcadores visuales provisionales.
+## Características
 
-## Publicar gratis en GitHub Pages
+- Castellano y catalán.
+- Nombre y opciones de niña/niño y unicornio/dinosaurio, introducidos en la pantalla inicial.
+- Cuestionario de comprensión al final: las respuestas correctas desaparecen y las incorrectas pueden repetirse, sin revelar la solución.
+- Compatible con móviles y PWA instalable y usable sin conexión después de la primera carga.
+- Sin cuentas ni servicios externos: el nombre se guarda solamente en el navegador con `localStorage`.
 
-1. En la cuenta `jloptes-cmyk`, usar el repositorio público ya creado: https://github.com/jloptes-cmyk/cuentame_mi_cuento
-2. Subir **el contenido de esta carpeta** (no la carpeta anidada) a la rama `main`.
-3. Abrir **Settings → Pages → Build and deployment → Deploy from a branch** y seleccionar **main / (root)**.
-4. La dirección prevista será: https://jloptes-cmyk.github.io/cuentame_mi_cuento/
+## Pruebas de concordancia
 
-No requiere npm, compilación, API, claves ni servicios de pago. Para probarlo localmente, ejecutar `python3 -m http.server 8000` desde esta carpeta y abrir http://localhost:8000 .
+Con Node.js: `node tests/variants.test.js`.
 
-## Cambiar contenido
+Comprueba las cuatro variantes castellanas **contra los textos completos** de `variantes/`, que no queden etiquetas sin sustituir y que el nombre se escape antes de insertarse en HTML. También verifica las variantes catalanas.
 
-- `stories.js`: páginas y variantes de la historia en ambos idiomas.
-- `app.js`: interfaz, selección, navegación, cuestionario y almacenamiento local.
-- `styles.css`: estilo visual.
-- `index.html`: estructura de la pantalla.
+## Publicar en GitHub Pages
 
-## Privacidad
+Repositorio: https://github.com/jloptes-cmyk/cuentame_mi_cuento
 
-La configuración se guarda en `localStorage` del navegador del usuario. No se envía a un backend. Cualquier persona con acceso a ese navegador y perfil podría ver las preferencias guardadas; se pueden eliminar borrando los datos del sitio.
+En **Settings → Pages**, elegir **Deploy from a branch → main / (root)**. Dirección prevista: https://jloptes-cmyk.github.io/cuentame_mi_cuento/.
+
+La app no necesita compilación ni dependencias. Para probarla en local, desde la raíz ejecutar `python3 -m http.server 8000`.
 
 ## Autoría
 
-Proyecto desarrollado para Javier L. Teso. Texto original y universo narrativo: su autor. No se ha concedido aquí una licencia de reutilización comercial.
+**Texto original y universo narrativo: Javier L. Teso.** Todos los derechos reservados. La traducción catalana y las adaptaciones mantienen esa atribución. No se concede licencia comercial del texto mediante este repositorio.
