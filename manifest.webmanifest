@@ -1,0 +1,13 @@
+{
+  "name": "Cuéntame mi cuento",
+  "short_name": "Mi cuento",
+  "description": "Cuentos personalizados para leer en familia",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fcf9ff",
+  "theme_color": "#543789",
+  "icons": [
+    {"src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}
+  ]
+}
